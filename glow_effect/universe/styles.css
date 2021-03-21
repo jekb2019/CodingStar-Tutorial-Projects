@@ -1,0 +1,92 @@
+/* Overall CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Planet CSS */
+.planet {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow:
+    /* Inner shadow */
+    inset 0 0 14px 0 white,
+    inset -40px -30px 60px 0 purple,
+    inset -40px -30px 70px 0 blue,
+    inset -40px -30px 100px 0 cyan,
+    inset -40px -30px 140px 0 powderblue,
+    /* Outer shadow */
+    0 0 20px 0 white,
+    10px 10px 20px 10px purple,
+    -10px -10px 20px 0 cyan;
+}
+
+/* Star CSS */
+.star {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+/* Specific Star CSS */
+.one {
+  top: 50%;
+  left: -150px;
+  transform-origin: calc(200px + 50%);
+  box-shadow:
+    0 0 50px 10px white,
+    0 0 50px 15px yellow;
+
+  transform: rotate(-30deg);
+  /* animation: orbit 10s linear infinite; */
+}
+
+.two {
+  top: -100px;
+  left: 400px;
+  box-shadow:
+    0 0 50px 10px white,
+    0 0 50px 15px cyan;
+}
+
+.three {
+  top: -100px;
+  left: -300px;
+  box-shadow:
+    0 0 50px 10px white,
+    0 0 50px 20px red;
+}
+
+.four {
+  top: 300px;
+  left: 450px;
+  box-shadow:
+    0 0 50px 10px white,
+    0 0 50px 20px magenta;
+}
+
+/* Orbit Animation */
+@keyframes orbit {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

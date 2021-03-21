@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>IDEA BANK</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/902eae35e9.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <span class="logo">CodeStar</span>
+      <i id="toggle" class="fa fa-bars"></i>
+      <nav class="navbar">
+        <ul class="list">
+          <li class="item"><a href="#">Home</a></li>
+          <li class="item"><a href="#">About</a></li>
+          <li class="item"><a href="#">Menu</a></li>
+          <li class="item"><a href="#">Contact</a></li>
+          <li class="item"><a href="#">Help</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section>
+    </section>
+
+    <script>
+      // let isNavbarOpen = true;
+      const toggleButton = document.querySelector('#toggle');
+      const navbar = document.querySelector('.navbar');
+      toggle.addEventListener('click', () => {
+        navbar.classList.toggle('active');
+      });
+
+      // window.addEventListener('resize', () => {
+      //   if(window.innerWidth > 800) {
+      //     navbar.style["height"] = "auto";
+      //   } else {
+      //     navbar.style["height"] = "0px";
+      //     isNavbarOpen = false;
+      //   }
+      // })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+/* Overall CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  text-align: center;
+  margin-top: 400px;
+  background-color: black;
+}
+
+/* Button CSS */
+.button:focus {
+  outline: none;
+}
+
+.button {
+  font-size: 30px;
+  background-color: magenta;
+  color: white;
+  padding: 20px 60px;
+  position: relative;
+  border: none;
+  border-radius: 20px;
+}
+
+.button:before,
+.button:after {
+  content: 'FLIP!';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  transition: transform 0.3s;
+  transform-origin: top;
+}
+
+.button:before {
+    background-color: blue;
+    transform: rotateX(270deg);
+}
+
+.button:after {
+  background-color: yellow;
+  color: black;
+  transition-delay: 0.2s;
+  transform: rotateX(270deg);
+}
+
+.button:hover:before,
+.button:hover:after {
+  transform: rotateX(270deg);
+}
