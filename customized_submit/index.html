@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Custom File Input</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <input id="image_input" class="img_input" type="file">
+    <button id="custom_input" class="button">
+      upload
+    </button>
+
+    <script>
+      const inputButton = document.querySelector('#image_input');
+      const customButton = document.querySelector('#custom_input');
+
+      // when the fake button is clicked,
+      // make the real real file input button to be clicked
+      customButton.addEventListener('click', () => {
+        inputButton.click();
+      })
+
+      // When the file is uploaded, switch the button text
+      inputButton.addEventListener('change', () => {
+        inputButton ? customButton.innerHTML = "done" : "upload";
+      })
+    </script>
+  </body>
+</html>

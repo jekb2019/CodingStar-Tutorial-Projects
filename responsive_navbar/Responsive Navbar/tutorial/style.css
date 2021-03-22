@@ -77,6 +77,15 @@ i.fa-bars {
   transform: rotateY(180deg);
 }
 
+.item.active:before {
+  background-color: black;
+  transform: rotateY(180deg);
+}
+
+.item.active a {
+  color: white
+}
+
 .item:hover a {
   color: white;
 }
