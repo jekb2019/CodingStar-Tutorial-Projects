@@ -6,15 +6,17 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <input id="image_input" class="img_input" type="file">
-    <button id="custom_input" class="button">
-      upload
-    </button>
-
+    <input id="real_input" class="real_input" type="file">
+    <div class="wrapper">
+      <button id="custom_input" class="button">
+        upload
+      </button>
+      <span id="file_name" class="file_name">filename.txt</span>
+    </div>
     <script>
-      const inputButton = document.querySelector('#image_input');
+      const inputButton = document.querySelector('#real_input');
       const customButton = document.querySelector('#custom_input');
-
+      const fileName = document.querySelector('#file_name');
       // when the fake button is clicked,
       // make the real real file input button to be clicked
       customButton.addEventListener('click', () => {
@@ -23,7 +25,17 @@
 
       // When the file is uploaded, switch the button text
       inputButton.addEventListener('change', () => {
-        inputButton ? customButton.innerHTML = "done" : "upload";
+        if(inputButton.value) {
+            fileName.innerHTML = inputButton.value.split(/(\\|\/)/g).pop();
+            fileName.classList.add('active');
+            customButton.style.width = "50px";
+            customButton.innerHTML = "&#x21ba;"
+        } else {
+            fileName.classList.remove('active');
+            customButton.innerHTML = "upload"
+            customButton.style.width = "150px";
+        }
+
       })
     </script>
   </body>
