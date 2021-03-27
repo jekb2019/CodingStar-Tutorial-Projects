@@ -48,7 +48,7 @@ body {
     height: 100%;
     background-color: white;
     transform-origin: left bottom;
-    transform: skew(30deg) translateX(40px);
+    transform: skew(30deg);
     transition: all 0.3s;
     opacity: 0.8;
 }

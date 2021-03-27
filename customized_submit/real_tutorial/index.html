@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Custom File Input</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <input id="real_input" type="file">
+    <div class="wrapper">
+      <button id="custom_input">upload</button>
+      <span id="file_name" class="">filename.txt</span>
+    </div>
+    <script>
+      const inputButton = document.querySelector('#real_input');
+      const customButton = document.querySelector('#custom_input');
+      const fileName = document.querySelector('#file_name');
+
+      // When the custom(fake) button is clicked,
+      //  make the real button to be clicked
+      customButton.addEventListener('click', () => {
+        inputButton.click();
+      });
+
+      // When the file is uplpoaded, change the file name text
+      // to match the uploaded file
+      inputButton.addEventListener('change', () => {
+        if(inputButton.value) {
+          // hide directory name
+          fileName.innerHTML = inputButton.value.split(/(\\|\/)/g).pop();
+          // Show file name text only when file is uploaded
+          fileName.classList.add('active');
+          // Change button design when file is uploaded
+          customButton.style.width = '50px';
+          customButton.innerHTML = '&#x21ba';
+        } else {
+          fileName.classList.remove('active');
+          customButton.innerHTML = 'upload';
+          customButton.style.width = '150px';
+        }
+      })
+
+    </script>
+  </body>
+</html>

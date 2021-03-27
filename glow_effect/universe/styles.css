@@ -53,7 +53,7 @@ body {
     0 0 50px 15px yellow;
 
   transform: rotate(-30deg);
-  /* animation: orbit 10s linear infinite; */
+  animation: orbit 10s linear infinite;
 }
 
 .two {
