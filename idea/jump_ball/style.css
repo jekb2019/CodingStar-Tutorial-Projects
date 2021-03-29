@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: #a4e08b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  height: 400px;
+  width: 100px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.ball {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  background-color: #e98bf7;
+  border-radius: 50%;
+  box-shadow: inset 0 -10px 20px gray;
+  animation: bounce 1s cubic-bezier(.49,0,.89,.74) infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0px);
+    height: 100px;
+    width: 100px;
+  }
+
+  75% {
+    height: 100px;
+    width: 100px;
+  }
+
+  90% {
+    height: 95px;
+    width: 105px;
+  }
+
+  100% {
+    transform: translateY(320px);
+    height: 90px;
+    width: 110px;
+  }
+}
+
+.shadow {
+  position: absolute;
+  top: 400px;
+  width: 100px;
+  height: 20px;
+  background-color: black;
+  border-radius: 50%;
+  z-index: -1;
+  box-shadow: 0 0 10px black;
+  animation: shadow 1s cubic-bezier(.49,0,.89,.74) infinite alternate;
+}
+
+@keyframes shadow {
+  0% {
+    opacity: 0.1;
+    width: 110px;
+    height: 20px;
+  }
+
+  80% {
+    opacity: 0.4;
+    width: 90px;
+    height: 15px;
+  }
+
+  100% {
+    opacity: 0.5;
+    width: 80px;
+    height: 10px;
+  }
+}

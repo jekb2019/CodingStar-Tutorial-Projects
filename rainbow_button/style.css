@@ -6,8 +6,8 @@
 }
 
 body {
-  width: 100%;
   height: 100vh;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,13 +52,12 @@ body {
 .button::after {
   top: 0;
   left: 25%;
-  background: orange;
+  background-color: orange;
   transform: translateY(100%);
 }
 
-/* Dummy shape to make use of
-before and after pseudo element
-and add background color*/
+/* Dummy shape to make use of before and after pseudo
+elements and add background color to the button */
 .shape {
   position: absolute;
   top: 0;
