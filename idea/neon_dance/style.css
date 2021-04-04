@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+.button {
+  width: 200px;
+  height: 70px;
+  font-size: 30px;
+  border: none;
+  background-color: transparent;
+  position: relative;
+  color: #4deeea;
+  animation-name: color_changer;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes color_changer {
+  0% {
+    color: #f000ff;
+  }
+
+  25% {
+    color: #74ee15;
+  }
+
+  50% {
+    color: #ffe700;
+  }
+
+  75% {
+    color: #4deeea;
+  }
+
+  100% {
+    color: #001eff;
+  }
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button::after {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-top: 35px solid 	#001eff;
+  border-right: 35px solid #f000ff;
+  border-bottom: 35px solid #4deeea;
+  border-left: 35px solid #74ee15;
+  transition: all 0.3s;
+}
+
+.button::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  border-top: 35px solid #4deeea;
+  border-right: 35px solid #74ee15;
+  border-bottom: 35px solid #ffe700;
+  border-left: 35px solid #f000ff;
+  transition: all 0.3s;
+  transition-delay: 0.3s;
+}
+
+.button:hover::before {
+  border-width: 5px;
+}
+
+.button:hover::after {
+  border-width: 5px;
+}
