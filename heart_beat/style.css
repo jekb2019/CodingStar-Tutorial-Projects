@@ -16,7 +16,6 @@ body {
 .wrapper {
   width: 200px;
   height: 200px;
-  /* border: 1px solid blue; */
   position: relative;
 }
 
@@ -28,11 +27,12 @@ body {
   background-color: red;
   top: 50px;
   left: 50px;
-  /* border: 1px solid black; */
   border: none;
   transform: rotate(45deg);
-  /* Add later */
-  transition: all 0.2s;
+}
+
+.heart:focus {
+  outline: none;
 }
 
 .heart::before,
@@ -43,7 +43,6 @@ body {
   width: 100%;
   background-color: red;
   border-radius: 50%;
-  /* border: 1px solid black */
 }
 
 .heart::before {
@@ -58,17 +57,14 @@ body {
 
 /* Beat Style */
 .beat {
-  top: 50px;
-  left: 50px;
   height: 100px;
   width: 100px;
   background-color: red;
-  /* border: 1px solid black; */
   position: absolute;
+  top: 50px;
+  left: 50px;
   transform: rotate(45deg);
   transition: all 0.2s;
-  transform: rotate(45deg) scale(1.2);
-  opacity: 0.2;
 }
 
 .beat::before,
@@ -79,9 +75,6 @@ body {
   width: 100%;
   background-color: red;
   border-radius: 50%;
-  /* border: 1px solid black */
-  /* Add later */
-  transition: all 0.2s;
 }
 
 .beat::before {
