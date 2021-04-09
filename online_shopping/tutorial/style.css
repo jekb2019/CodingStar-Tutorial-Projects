@@ -1,0 +1,66 @@
+/* General Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+}
+
+/* Card Style */
+.card {
+  margin: 20px;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* Image Style */
+img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+/* Caption Style */
+.caption {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 35%;
+  background-color: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  left: 0;
+  color: white;
+  /* transform: translateY(100%); */
+  transition: all 0.4s;
+}
+
+.card:hover .caption {
+  transform: translateY(0%);
+}
+
+#three {
+  transform: translateY(100%);
+}
+
+#one {
+  transform: translateY(40%);
+
+}

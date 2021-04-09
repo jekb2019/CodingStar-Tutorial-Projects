@@ -1,0 +1,51 @@
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+.container {
+  border: 3px solid black;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  cursor: pointer;
+}
+
+.container:hover {
+  border-color: red;
+}
+
+.one {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  background-color: pink;
+  transform: translateX(0%);
+  transition: all 0.5s;
+}
+
+.container:hover .one {
+  transform: translateX(-100%);
+  transition-delay: 0.5s;
+}
+
+.two {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  background-color: powderblue;
+  transform: translateX(0%);
+  transition: all 0.5s;
+  transition-delay: 0.5s;
+}
+
+.container:hover .two {
+  transform: translateX(100%);
+  transition-delay: 0s;
+}
