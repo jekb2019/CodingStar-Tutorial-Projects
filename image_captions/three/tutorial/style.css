@@ -1,4 +1,3 @@
-/* General Style */
 * {
   margin: 0;
   padding: 0;
@@ -25,14 +24,16 @@ img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-  transform: rotateX(0deg);
+  transform: rotateX(60deg);
   transition: transform 0.25s linear;
   transition-delay: 0.25s;
   border-radius: 30px;
 }
 
-.caption {
+.description {
   position: absolute;
+  background-color:  #b5aba2;
+  color: white;
   top: 0;
   left: 0;
   width: 100%;
@@ -41,8 +42,6 @@ img {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: black;
-  color: white;
   transform: rotateX(-90deg);
   transition: transform 0.25s linear;
   border-radius: 30px;
@@ -57,7 +56,7 @@ p {
   font-size: 18px;
 }
 
-.wrapper:hover .caption{
+.wrapper:hover .description {
   transform: rotateX(0deg);
   transition-delay: 0.25s;
 }
