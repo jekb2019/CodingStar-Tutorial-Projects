@@ -6,21 +6,24 @@
     box-sizing: border-box;
 }
 
+/* General Styling */
 li {
     list-style-type: none;
 }
 
 a {
     text-decoration: none;
-    color: black;
 }
 
 body {
     width: 100%;
     height: 100vh;
     font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Header */
 header {
     height: 60px;
     padding: 10px 20px;
@@ -33,11 +36,15 @@ header {
 .navbar ul {
     display: flex;
     align-items: center;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .item {
     margin-left: 15px;
+}
+
+.item a {
+    color: black;
 }
 
 .header_link:hover {
@@ -75,3 +82,41 @@ header {
     font-size: 18px;
 }
 
+/* Content */
+.content {
+    flex-grow: 1;
+}
+
+
+/* Footer */
+footer {
+    height: 100px;
+    background-color: #F2F2F2;
+}
+
+.footer {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.upper_footer {
+    height: 50%;
+    border-bottom: 1px solid lightgray;
+    color: gray;
+}
+
+.lower_footer {
+    justify-content: space-between;
+    height: 50%;
+}
+
+.lower_footer .about ul,
+.lower_footer .policy ul {
+    display: flex;
+}
+
+.lower_footer .about ul li a,
+.lower_footer .policy ul li a {
+    color: gray;
+}
