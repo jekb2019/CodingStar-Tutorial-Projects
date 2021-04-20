@@ -85,7 +85,30 @@ header {
 /* Content */
 .content {
     flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.content_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.logo_image {
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.search_bar {
+    border: 1px solid lightgray;
+    width: 550px;
+    height: 40px;
+    border-radius: 30px;
+}
+
 
 
 /* Footer */
