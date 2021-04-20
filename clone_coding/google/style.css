@@ -1,0 +1,77 @@
+
+/* Apply to all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+header {
+    height: 60px;
+    padding: 10px 20px;
+}
+
+.navbar {
+    float: right;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.item {
+    margin-left: 15px;
+}
+
+.header_link:hover {
+    text-decoration: underline;
+}
+
+.circle_shadow {
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.circle_shadow:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.menu_icon {
+    font-size: 1.3em;
+}
+
+.user_icon {
+    height: 30px;
+    width: 30px;
+    background-color: #EF6C00;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+}
+
+.user_icon span {
+    color: white;
+    font-size: 18px;
+}
+
