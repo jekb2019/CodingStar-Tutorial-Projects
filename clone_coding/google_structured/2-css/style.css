@@ -93,6 +93,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-bottom: 100px;
 }
 
 .logo-img {
@@ -171,5 +172,52 @@ header {
 /* Footer */
 footer {
     border: 1px solid blue;
+    background-color: #F2F2F2;
+    height: 100px;
 }
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.upper-footer {
+    height: 50%;
+    border-bottom: 1px solid lightgray;
+}
+
+.lower-footer {
+    height: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lower-footer ul li a {
+    color: black;
+}
+
+.lower-footer ul li a:hover {
+    text-decoration: underline;
+}
+
+.lower-left-footer {
+    display: flex;
+}
+
+.lower-left-footer li {
+    margin-right: 15px;
+}
+
+.lower-right-footer {
+    display: flex;
+}
+
+.lower-right-footer li {
+    margin-left: 15px;
+}
+
+
+
+
 
