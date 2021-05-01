@@ -1,0 +1,23 @@
+/* General Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  height: 300px;
+  width: 250px;
+  position: relative;
+  border: 10px solid black;
+  background-color: #d67035;
+}

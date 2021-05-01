@@ -81,8 +81,6 @@ header {
     line-height: 30px;
 }
 
-
-
 /* Content */
 .content-section {
     flex-grow: 1;
@@ -149,7 +147,7 @@ header {
     border-radius: 5px;
     margin-left: 10px;
     color: black;
-    background-color: #f2f3f4;
+    background-color: #F2F3F4;
 }
 
 .search-btns button:hover {
@@ -166,7 +164,7 @@ header {
 
 .language {
     margin-top: 20px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .language p a {
@@ -222,6 +220,7 @@ footer {
     margin-right: 15px;
 }
 
+
 .lower-right-footer {
     display: flex;
 }
@@ -230,7 +229,7 @@ footer {
     margin-left: 15px;
 }
 
-/* Mobile */
+/* Mobile and Tablet */
 @media only screen and (max-width: 650px) {
     /* Search Bar */
     .search-bar {
