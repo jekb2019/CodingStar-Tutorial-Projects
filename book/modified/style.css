@@ -12,7 +12,7 @@ body {
     align-items: center;
     justify-content: center;
     font-family: sans-serif;
-    background-color: pink;
+    background-color: #dac400;
 }
 
 /* Button */
@@ -56,7 +56,7 @@ i {
 
 .front {
     backface-visibility: hidden;
-    border-left: 3px solid pink;
+    border-left: 3px solid #dac400;
 }
 
 .front, 
@@ -114,3 +114,36 @@ i {
 #p3 {
     z-index: 1;
 }
+
+/* Modification */
+
+.book-title {
+    font-size: 3em;
+    margin-bottom: 40px;
+}
+
+.cover-img {
+    width: 200px;
+    height: 270px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+#b1 {
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    justify-content: space-around;
+}
+
+#b1 h2 {
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#b1 p {
+    margin-bottom: 20px;
+}
+
+

@@ -107,3 +107,12 @@ h1 {
     z-index: 1;
 }
 
+/* Modification */
+.front-content {
+
+}
+
+img {
+    width: 100px;
+    height: 100px;
+}
