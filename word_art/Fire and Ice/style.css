@@ -1,0 +1,117 @@
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  align-items: center;
+  background-color: #848484;
+}
+
+.wrapper {
+
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+li {
+  list-style: none;
+  font-size: 100px;
+  font-weight: bold;
+  letter-spacing: 8px;
+}
+
+.fire li {
+  color: black;
+}
+
+.snow li {
+  color: white;
+}
+
+.wrapper:hover li {
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.wrapper:hover .fire li {
+  animation-name: fire-color;
+}
+
+.wrapper:hover .snow li {
+animation-name: ice-color;
+}
+
+li:nth-child(1) {
+  animation-delay: 0;
+}
+
+li:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+li:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+li:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+li:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+@keyframes fire-color {
+  0% {
+    color: #801100;
+  }
+
+  20% {
+    color: #b62203;
+  }
+
+  40% {
+    color: #d73502;
+  }
+
+  60% {
+    color: #fc6400;
+  }
+
+  80% {
+    color: #ff7500;
+  }
+
+  100% {
+    color: #fac000;
+  }
+}
+
+@keyframes ice-color {
+  0% {
+    color: #ffffff;
+  }
+
+  25% {
+    color: #b9e8ea;
+  }
+
+  50% {
+    color: #86d6d8;
+  }
+
+  75% {
+    color: #3fd0d4;
+  }
+
+  100% {
+    color: #20c3d0;
+  }
+}
