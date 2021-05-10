@@ -1,0 +1,25 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.icon {
+  height: 80px;
+  width: 80px;
+
+  background-color: powderblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
