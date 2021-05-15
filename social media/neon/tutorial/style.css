@@ -15,28 +15,32 @@ a {
 }
 
 .icon {
-  margin: 5px;
-  background-color: #ffe8ee;
+  border: 3px solid black;
   height: 70px;
   width: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  box-shadow: 3px 3px 8px 0px rgba(0, 0, 0, 0.2);
+  margin: 5px;
 }
 
 .icon i {
   font-size: 25px;
-  color: #957dad;
-  transition: all 0.2s;
+  color: black;
 }
 
-.icon:hover {
-  background-color: #fcf1d8;
+.icon:focus {
+  animation: bounce 0.4s cubic-bezier(0.59, -0.67, 0.24, 0.79) 2;
+  animation-direction: alternate;
 }
 
-.icon:hover i {
-  transform: rotate(15deg) scale(1.5);
-  color: #b3a580;
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(-70px);
+  }
 }

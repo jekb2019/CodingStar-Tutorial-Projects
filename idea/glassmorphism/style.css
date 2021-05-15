@@ -1,0 +1,35 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+  position: relative;
+  perspective: 1500px;
+}
+
+
+
+h1 {
+  position: absolute;
+  color: white;
+  font-family: sans-serif;
+  font-size: 50px;
+  z-index: 1;
+}
+
+.wrapper {
+  position: absolute;
+  height: 400px;
+  width: 250px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  z-index: 1;
+  border-radius: 30px;
+  transition: transform 0.5s;
+  transform-origin: center;
+}
+
+.wrapper:hover {
+  transform: rotateY(180deg);
+}
