@@ -2,7 +2,6 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body {
@@ -15,7 +14,6 @@ body {
 
 /* Button Style */
 .button {
-  position: relative;
   font-size: 30px;
   padding: 10px 30px;
   border: 3px solid black;
@@ -23,6 +21,7 @@ body {
   letter-spacing: 4px;
   background-color: transparent;
   color: white;
+  position: relative;
   overflow: hidden;
 }
 
@@ -45,7 +44,7 @@ body {
   top: 0;
   left: 0;
   background-color: red;
-  transform: translateY(-100%);
+  transform: translateY(-50%);
 }
 
 /* Orange */
@@ -53,7 +52,7 @@ body {
   top: 0;
   left: 25%;
   background-color: orange;
-  transform: translateY(100%);
+  transform: translateY(50%);
 }
 
 /* Dummy shape to make use of before and after pseudo
@@ -82,7 +81,7 @@ elements and add background color to the button */
   top: 0;
   left: 50%;
   background-color: green;
-  transform: translateY(-100%);
+  transform: translateY(-50%);
 }
 
 /* Purple */
@@ -90,7 +89,7 @@ elements and add background color to the button */
   top: 0;
   left: 75%;
   background-color: purple;
-  transform: translateY(100%);
+  transform: translateY(50%);
 }
 
 /* Hover Effect */
