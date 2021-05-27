@@ -1,0 +1,60 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-color: black;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  display: flex;
+}
+
+.icon {
+  position: relative;
+  background-color: rgba( 255, 255, 255, 0.1 );
+  width: 70px;
+  height: 70px;
+  margin-left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+}
+
+.icon::before {
+  position: absolute;
+  content: "";
+  background-color: white;
+  opacity: 0.4;
+  width: 70px;
+  height: 30px;
+  top: 0;
+  left: 0;
+  transform: translate(-20px, 70px) rotateZ(30deg);
+  transition: transform 0.3s;
+}
+
+.icon i {
+  font-size: 25px;
+  color: white;
+  opacity: 0.7;
+  transition: all 0.2s;
+}
+
+.icon:hover::before {
+  transform: translate(20px, -30px) rotateZ(30deg);
+}
+
+.icon:hover i {
+  transform: scale(1.5);
+}
