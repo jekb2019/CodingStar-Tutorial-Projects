@@ -43,6 +43,17 @@ a {
   transition: transform 0.3s;
 }
 
+.icon.active::before {
+  transform: translate(0px, 0px) rotateZ(30deg);
+  transform-origin: center;
+  opacity: 0.5;
+  width: 100px;
+}
+
+.icon.active i {
+  transform: scale(1.5);
+}
+
 .icon:hover::before {
   transform: translate(20px, -30px) rotateZ(30deg);
 }

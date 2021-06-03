@@ -1,0 +1,94 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper {
+  height: 300px;
+  width: 200px;
+  position: relative;
+}
+
+.tree {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 150px;
+  background-color: #e58749;
+}
+
+.tree::before {
+  position: absolute;
+  content: "";
+  background-color: #e58749;
+  width: 40px;
+  height: 60px;
+  top: -60px;
+  transform-origin: left bottom;
+  transform: rotateZ(30deg);
+}
+
+.tree::after {
+  position: absolute;
+  content: "";
+  background-color: #e58749;
+  width: 40px;
+  height: 60px;
+  top: -50px;
+  transform-origin: right bottom;
+  transform: rotateZ(-30deg);
+}
+
+.leaves {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  background-color: #27b229;
+  bottom: 50%;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+  z-index: 1;
+  transition: all 0.5s;
+}
+
+.leaves::before {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 100px;
+  background-color: #0ea511;
+  border-radius: 50%;
+  transform: translate(40px, 60px) scale(0);
+  transition: all 0.5s;
+}
+
+.leaves::after {
+  position: absolute;
+  content: "";
+  width: 100px;
+  height: 100px;
+  background-color: #2d9b2e;
+  border-radius: 50%;
+  transition: all 0.5s;
+  transform: translate(-40px, 60px) scale(0);
+}
+
+.wrapper:hover .leaves::before{
+    /* transition-delay: 1.5s; */
+  transform: translate(40px, 60px) scale(1);
+}
+
+.wrapper:hover .leaves::after{
+  /* transition-delay: 1s; */
+  transform: translate(-40px, 60px) scale(1);
+}
+
+.wrapper:hover .leaves{
+  /* transition-delay: 1s; */
+  transform: translateX(-50%) scale(1);
+}
