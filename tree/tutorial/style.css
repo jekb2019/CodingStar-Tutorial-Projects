@@ -10,16 +10,17 @@ body {
   width: 200px;
   height: 300px;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .leaves,
 .wood {
-    height: 50%;
+  height: 50%;
 }
 
-/* Leaves wrapper */
+/* leaves wrapper */
 .leaves {
   width: 100%;
   position: relative;
@@ -64,29 +65,29 @@ body {
 }
 
 #one {
-  background-color: #27b229;
   top: -15px;
   left: 25%;
+  background-color: #27b229;
 }
 
 #two {
-  background-color: #0ea511;
   bottom: 0;
   left: 5%;
+  background-color: #0ea511;
 }
 
 #three {
-  background-color: #2d9b2e;
   bottom: 0;
   right: 5%;
+  background-color: #2d9b2e;
 }
 
 .leaf::before {
-  width: 20px;
   height: 20px;
-  position: absolute;
-  content: "";
+  width: 20px;
   background-color: #e2062c;
+  content: "";
+  position: absolute;
   border-radius: 50%;
   top: 50%;
   left: 50%;
@@ -94,11 +95,12 @@ body {
   transition: transform 0.3s;
 }
 
-/* Hover Effects */
+/* Hover Effect */
 .tree:hover .leaf {
   transform: scale(1);
 }
 
+/* Delays for each leaf */
 .tree:hover #one {
   transition-delay: 0.4s;
 }
@@ -111,6 +113,7 @@ body {
   transition-delay: 0s;
 }
 
+/* Delays for apples */
 .tree:hover .leaf::before {
   transform: translate(-50%, 30%) scale(1);
   transition-delay: 0.6s;
