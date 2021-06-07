@@ -2,29 +2,33 @@ const popcat = document.querySelector("#popcat");
 const btn = document.querySelector("#btn");
 const closeImgUrl = "./images/close.png";
 const openImgUrl = "./images/open.png";
-
-
-// Buttn Event Handling
-btn.addEventListener("mousedown", function() {
-    popcat.src = openImgUrl;
-    playOpenSound();
-});
-
-btn.addEventListener("mouseup", function() {
-    popcat.src = closeImgUrl;
-    playCloseSound();
-});
-
-
-
-// Sound
 const openSound = new Audio("./sound/sound-open.mp3");
 const closeSound = new Audio("./sound/sound-close.mp3");
 
-function playOpenSound() {
+// Button Event Handling for mouse clicks
+btn.addEventListener("mousedown", openMouth);
+btn.addEventListener("mouseup", closeMouth);
+
+// Button Event Handling for touch screens
+btn.addEventListener("touchstart", function(e){
+    e.preventDefault(); 
+    openMouth();
+});
+
+btn.addEventListener("touchend", function(e){
+    e.preventDefault();
+    closeMouth();
+});
+
+
+
+
+function openMouth() {
+    popcat.src = openImgUrl;
     openSound.play();
 }
 
-function playCloseSound() {
+function closeMouth() {
+    popcat.src = closeImgUrl;
     closeSound.play();
 }
